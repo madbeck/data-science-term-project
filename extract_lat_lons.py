@@ -40,7 +40,7 @@ def extract_lat_lon(zip_code):
 def lat_lons_from_zip_codes():
 	lat_lons = {}
 
-	with open('./data/LA_Ranking_2019-04-04_21-54-40.csv') as csvfile:
+	with open('./data/combined_data_by_zip_code/LA_Ranking_2019-04-04_21-54-40.csv') as csvfile:
 		readCSV = csv.reader(csvfile, delimiter=',')
 		# extract column headers
 		columns = next(readCSV)
