@@ -34,7 +34,7 @@ def extract_lat_lon(zip_code):
 	info = wrapper.find_all('td', {'class': 'info'})
 	lat = info[indices[0]].string
 	lon = info[indices[1]].string
-	return lat + lon
+	return lat + ", " + lon
 
 
 def lat_lons_from_zip_codes():
