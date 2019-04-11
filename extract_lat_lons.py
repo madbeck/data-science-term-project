@@ -35,7 +35,7 @@ def extract_lat_lon(zip_code):
 	lat = info[indices[0]].string
 	lon = info[indices[1]].string
 	return lat + ", " + lon
-
+	
 
 def lat_lons_from_zip_codes():
 	lat_lons = {}
@@ -52,11 +52,10 @@ def lat_lons_from_zip_codes():
 
 	return lat_lons
 
-
 #########################################################################################
 
 # running program
 lat_lons = lat_lons_from_zip_codes()
-with open('lat_lons_by_zip_code.txt', 'w') as outfile:
+with open('lat_lon_by_zip_code.txt', 'w') as outfile:
 	json.dump(lat_lons, outfile)
 

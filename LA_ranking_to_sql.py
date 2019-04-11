@@ -25,12 +25,12 @@ conn = sqlite3.connect('combined_data.db')
 c = conn.cursor()
 
 # Delete tables if they exist
-c.execute('DROP TABLE IF EXISTS "zip_codes";')
+c.execute('DROP TABLE IF EXISTS "economic_health_la";')
 
 # Create tables in the database and add data to it. REMEMBER TO COMMIT
-c.execute('CREATE TABLE zip_codes(zip_code text primary key, unemployed number, income number, obesity number, diabetes number);')
+c.execute('CREATE TABLE economic_health_la(zip_code text primary key, unemployed number, income number, obesity number, diabetes number);')
 
 for item in zip_code_to_info:
-	c.execute('INSERT INTO zip_codes VALUES (?, ?, ?, ?, ?)', (item, zip_code_to_info[item][0], zip_code_to_info[item][1], zip_code_to_info[item][2], zip_code_to_info[item][3]))
+	c.execute('INSERT INTO economic_health_la VALUES (?, ?, ?, ?, ?)', (item, zip_code_to_info[item][0], zip_code_to_info[item][1], zip_code_to_info[item][2], zip_code_to_info[item][3]))
 
 conn.commit()
