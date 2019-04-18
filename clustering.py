@@ -13,7 +13,7 @@ def sk_learn_cluster(X, K):
 	kmeans = KMeans(n_clusters=K, random_state=0).fit(X)
 	return kmeans
 
-def main():
+def parse_data():
 	with open('./data/combined_data_by_zip_code/LA_Ranking_2019-04-04_21-54-40.csv') as combined_data:
 		csv_reader = csv.DictReader(combined_data, delimiter = ',')
 		data = []
@@ -25,14 +25,13 @@ def main():
 			cleaned_row.append(float(row['% Diabetes, 2018']))
 			data.append(np.array(cleaned_row))
 		data = np.array(data)
-
-	kmeans = sk_learn_cluster(data, 4)
-	return kmeans
-
+	return data
 
 ################################################################
 
-kmeans = main()
+data = parse_data()
+kmeans = sk_learn_cluster(data, 4)
+
 # cluster centers available at kmeans.cluster_centers_
 labels = kmeans.predict(data) # clusters each zip code is closest to
 print(labels)
