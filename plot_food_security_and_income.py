@@ -22,11 +22,14 @@ three_km_ff = [data[i][3] for i in avg_income]
 
 # PLOT DATA
 
+plt.scatter(avg_income, one_km_sm, label="1km supermarkets", c='#639df9', alpha=0.8)
+plt.scatter(avg_income, one_km_ff, label="1km fast food", c='#ce4646', alpha=0.8)
 # plt.plot(avg_income, one_km_sm, label="1km supermarkets", color='blue', marker='o', linestyle='solid', linewidth=1, markersize=5)
-plt.plot(avg_income, one_km_ff, label="1km fast food", color='red', marker='o', linestyle='solid', linewidth=1, markersize=5)
+# plt.plot(avg_income, one_km_ff, label="1km fast food", color='red', marker='o', linestyle='solid', linewidth=1, markersize=5)
 
 # plt.plot(avg_income, three_km_sm, '-b', label="3km supermarkets")
 # plt.plot(avg_income, three_km_ff, label="3km fast food")
+
 plt.xlabel('food security', fontsize=12)
 plt.ylabel('number of establishments', fontsize=12)
 plt.legend()
