@@ -13,9 +13,7 @@ result = c.fetchall()
 data = {}
 for r in result:
     data[r[5]] = [r[1], r[2], r[3], r[4]]
-
 avg_income = sorted(data.keys())
-
 
 buckets = {}
 for i in data:
@@ -35,15 +33,11 @@ for i in buckets:
 	d = sum([j[3] for j in buckets[i]]) / total
 	output[i] = [a, b, c, d]
 
-print(output)
-print(len(output))
 income = sorted(output.keys())
-
 one_km_sm = [output[i][0] for i in income]
 three_km_sm = [output[i][1] for i in income]
 one_km_ff = [output[i][2] for i in income]
 three_km_ff = [output[i][3] for i in income]
-
 
 #####################################################################
 
@@ -76,8 +70,3 @@ plt.xlabel('food security', fontsize=12)
 plt.ylabel('number of establishments', fontsize=12)
 plt.legend()
 plt.show()
-
-
-
-
-
