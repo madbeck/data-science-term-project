@@ -53,11 +53,6 @@ three_km_ff = [output[i][3] for i in income]
 # plt.scatter(avg_income, one_km_sm, label="1km supermarkets", c='#639df9', alpha=0.8)
 # plt.plot(avg_income, [p(i) for i in avg_income], '-')
 
-z = np.polyfit(income, three_km_sm, 2)
-p = np.poly1d(z)
-plt.scatter(income, three_km_sm, label="3km supermarkets", c='#639df9', alpha=0.8)
-plt.plot(income, [p(i) for i in income], '-')
-
 # AVG INCOME VS 1KM FF
 # z = np.polyfit(avg_income, one_km_ff, 2)
 # p = np.poly1d(z)
@@ -75,13 +70,6 @@ plt.plot(income, [p(i) for i in income], '-')
 # p = np.poly1d(z)
 # plt.scatter(avg_income, three_km_ff, label="1km fast food", c='#ce4646', alpha=0.8)
 # plt.plot(avg_income, [p(i) for i in avg_income], '-')
-
-
-# OLD PLOTS (NOT SCATTER)
-# plt.plot(avg_income, one_km_sm, label="1km supermarkets", color='blue', marker='o', linestyle='solid', linewidth=1, markersize=5)
-# plt.plot(avg_income, one_km_ff, label="1km fast food", color='red', marker='o', linestyle='solid', linewidth=1, markersize=5)
-# plt.plot(avg_income, three_km_sm, '-b', label="3km supermarkets")
-# plt.plot(avg_income, three_km_ff, label="3km fast food")
 
 # BELOW NEEDED TO PLOT ALL GRAPHS
 plt.xlabel('food security', fontsize=12)

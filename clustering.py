@@ -141,129 +141,125 @@ with open('./data/la_economic_health_cluster_data3.csv', mode='w') as food_acces
 
 ################################################################
 
-# data, zip_codes = parse_food_access_data()
-# kmeans = sk_learn_cluster(data, 4)
-# labels = kmeans.predict(data)
-# cluster1 = [zip_codes[i] for i in range(len(zip_codes)) if labels[i] == 0]
-# cluster2 = [zip_codes[i] for i in range(len(zip_codes)) if labels[i] == 1]
-# cluster3 = [zip_codes[i] for i in range(len(zip_codes)) if labels[i] == 2]
-# cluster4 = [zip_codes[i] for i in range(len(zip_codes)) if labels[i] == 3]
+data, zip_codes = parse_food_access_data()
+kmeans = sk_learn_cluster(data, 4)
+labels = kmeans.predict(data)
+cluster1 = [zip_codes[i] for i in range(len(zip_codes)) if labels[i] == 0]
+cluster2 = [zip_codes[i] for i in range(len(zip_codes)) if labels[i] == 1]
+cluster3 = [zip_codes[i] for i in range(len(zip_codes)) if labels[i] == 2]
 
-# with open('./data/food_access_cluster_data3.csv', mode='w') as food_access_file:
-#     writer = csv.writer(food_access_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
-#     for i in cluster1:
-#     	writer.writerow([i, 0])
-#     for j in cluster2:
-#     	writer.writerow([j, 1])
-#     for k in cluster3:
-#     	writer.writerow([k, 2])
-#     for l in cluster4:
-#     	writer.writerow([l, 3])
+with open('./data/food_access_cluster_data.csv', mode='w') as food_access_file:
+    writer = csv.writer(food_access_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+    for i in cluster1:
+    	writer.writerow([i, 0])
+    for j in cluster2:
+    	writer.writerow([j, 1])
+    for k in cluster3:
+    	writer.writerow([k, 2])
 
 ################################################################
 
-# data, zip_codes = parse_health_data()
-# kmeans = sk_learn_cluster(data, 2)
-# labels = kmeans.predict(data)
-# cluster1 = [zip_codes[i] for i in range(len(zip_codes)) if labels[i] == 0]
-# cluster2 = [zip_codes[i] for i in range(len(zip_codes)) if labels[i] == 1]
-# cluster3 = [zip_codes[i] for i in range(len(zip_codes)) if labels[i] == 2]
+data, zip_codes = parse_health_data()
+kmeans = sk_learn_cluster(data, 2)
+labels = kmeans.predict(data)
+cluster1 = [zip_codes[i] for i in range(len(zip_codes)) if labels[i] == 0]
+cluster2 = [zip_codes[i] for i in range(len(zip_codes)) if labels[i] == 1]
+cluster3 = [zip_codes[i] for i in range(len(zip_codes)) if labels[i] == 2]
 
-# with open('./data/health_cluster_data.csv', mode='w') as food_access_file:
-#     writer = csv.writer(food_access_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
-#     for i in cluster1:
-#     	writer.writerow([i, 0])
-#     for j in cluster2:
-#     	writer.writerow([j, 1])
-#     for k in cluster3:
-#     	writer.writerow([k, 2])
+with open('./data/health_cluster_data.csv', mode='w') as food_access_file:
+    writer = csv.writer(food_access_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+    for i in cluster1:
+    	writer.writerow([i, 0])
+    for j in cluster2:
+    	writer.writerow([j, 1])
+    for k in cluster3:
+    	writer.writerow([k, 2])
 
 ################################################################
 
-# data, zip_codes = parse_health_data()
-# kmeans = sk_learn_cluster(data, 2)
-# labels = kmeans.predict(data)
-# cluster1 = [zip_codes[i] for i in range(len(zip_codes)) if labels[i] == 0]
-# cluster2 = [zip_codes[i] for i in range(len(zip_codes)) if labels[i] == 1]
-# cluster3 = [zip_codes[i] for i in range(len(zip_codes)) if labels[i] == 2]
+data, zip_codes = parse_health_data()
+kmeans = sk_learn_cluster(data, 2)
+labels = kmeans.predict(data)
+cluster1 = [zip_codes[i] for i in range(len(zip_codes)) if labels[i] == 0]
+cluster2 = [zip_codes[i] for i in range(len(zip_codes)) if labels[i] == 1]
+cluster3 = [zip_codes[i] for i in range(len(zip_codes)) if labels[i] == 2]
 
-# with open('./data/economic_cluster_data1.csv', mode='w') as food_access_file:
-#     writer = csv.writer(food_access_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
-#     for i in cluster1:
-#     	writer.writerow([i, 0])
-#     for j in cluster2:
-#     	writer.writerow([j, 1])
-#     for k in cluster3:
-#     	writer.writerow([k, 2])
+with open('./data/economic_cluster_data.csv', mode='w') as food_access_file:
+    writer = csv.writer(food_access_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+    for i in cluster1:
+    	writer.writerow([i, 0])
+    for j in cluster2:
+    	writer.writerow([j, 1])
+    for k in cluster3:
+    	writer.writerow([k, 2])
 
 ################################################################
 # use 'clustering' model to generate areas of higher and lower fast food density
 
-# data, zip_codes = parse_food_access_ff()
-# kmeans = sk_learn_cluster(data, 3)
-# labels = kmeans.predict(data)
-# cluster1 = [zip_codes[i] for i in range(len(zip_codes)) if labels[i] == 0]
-# cluster2 = [zip_codes[i] for i in range(len(zip_codes)) if labels[i] == 1]
-# cluster3 = [zip_codes[i] for i in range(len(zip_codes)) if labels[i] == 2]
+data, zip_codes = parse_food_access_ff()
+kmeans = sk_learn_cluster(data, 3)
+labels = kmeans.predict(data)
+cluster1 = [zip_codes[i] for i in range(len(zip_codes)) if labels[i] == 0]
+cluster2 = [zip_codes[i] for i in range(len(zip_codes)) if labels[i] == 1]
+cluster3 = [zip_codes[i] for i in range(len(zip_codes)) if labels[i] == 2]
 
-# with open('./data/food_access_ff.csv', mode='w') as food_access_file:
-#     writer = csv.writer(food_access_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
-#     for i in cluster1:
-#     	writer.writerow([i, 0])
-#     for j in cluster2:
-#     	writer.writerow([j, 1])
-#     for k in cluster3:
-#     	writer.writerow([k, 2])
+with open('./data/food_access_ff.csv', mode='w') as food_access_file:
+    writer = csv.writer(food_access_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+    for i in cluster1:
+    	writer.writerow([i, 0])
+    for j in cluster2:
+    	writer.writerow([j, 1])
+    for k in cluster3:
+    	writer.writerow([k, 2])
 
-# buckets = {}
-# for i in range(len(labels)):
-# 	cluster = labels[i]
-# 	point = data[i][1]
-# 	if cluster in buckets:
-# 		buckets[cluster].append(point)
-# 	else:
-# 		buckets[cluster] = [point]
+buckets = {}
+for i in range(len(labels)):
+	cluster = labels[i]
+	point = data[i][1]
+	if cluster in buckets:
+		buckets[cluster].append(point)
+	else:
+		buckets[cluster] = [point]
 
-# ranges = {}
-# for i in buckets:
-# 	min_ = min(buckets[i])
-# 	max_ = max(buckets[i])
-# 	ranges[i] = (min_, max_)
-# print(ranges)
+ranges = {}
+for i in buckets:
+	min_ = min(buckets[i])
+	max_ = max(buckets[i])
+	ranges[i] = (min_, max_)
+print(ranges)
 
 ######################################################################
 # use 'clustering' model to generate areas of higher and lower supermarket density
 
-# data, zip_codes = parse_food_access_sm()
-# print(data)
-# kmeans = sk_learn_cluster(data, 3)
-# labels = kmeans.predict(data)
-# cluster1 = [zip_codes[i] for i in range(len(zip_codes)) if labels[i] == 0]
-# cluster2 = [zip_codes[i] for i in range(len(zip_codes)) if labels[i] == 1]
-# cluster3 = [zip_codes[i] for i in range(len(zip_codes)) if labels[i] == 2]
+data, zip_codes = parse_food_access_sm()
+kmeans = sk_learn_cluster(data, 3)
+labels = kmeans.predict(data)
+cluster1 = [zip_codes[i] for i in range(len(zip_codes)) if labels[i] == 0]
+cluster2 = [zip_codes[i] for i in range(len(zip_codes)) if labels[i] == 1]
+cluster3 = [zip_codes[i] for i in range(len(zip_codes)) if labels[i] == 2]
 
-# with open('./data/food_access_sm.csv', mode='w') as food_access_file:
-#     writer = csv.writer(food_access_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
-#     for i in cluster1:
-#     	writer.writerow([i, 0])
-#     for j in cluster2:
-#     	writer.writerow([j, 1])
-#     for k in cluster3:
-#     	writer.writerow([k, 2])
+with open('./data/food_access_sm.csv', mode='w') as food_access_file:
+    writer = csv.writer(food_access_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+    for i in cluster1:
+    	writer.writerow([i, 0])
+    for j in cluster2:
+    	writer.writerow([j, 1])
+    for k in cluster3:
+    	writer.writerow([k, 2])
 
-# buckets = {}
-# for i in range(len(labels)):
-# 	cluster = labels[i]
-# 	point = data[i][1]
-# 	if cluster in buckets:
-# 		buckets[cluster].append(point)
-# 	else:
-# 		buckets[cluster] = [point]
+buckets = {}
+for i in range(len(labels)):
+	cluster = labels[i]
+	point = data[i][1]
+	if cluster in buckets:
+		buckets[cluster].append(point)
+	else:
+		buckets[cluster] = [point]
 
-# ranges = {}
-# for i in buckets.keys():
-# 	min_ = min(buckets[i])
-# 	max_ = max(buckets[i])
-# 	ranges[i] = (min_, max_)
-# print(ranges)
+ranges = {}
+for i in buckets.keys():
+	min_ = min(buckets[i])
+	max_ = max(buckets[i])
+	ranges[i] = (min_, max_)
+print(ranges)
 

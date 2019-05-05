@@ -8,7 +8,7 @@ Reads data from LA_Ranking_2019-04-04_21-54-40.csv file, which contains unemploy
 
 zip_code_info = {}
 
-with open('./food_proximity_data_v2.txt') as json_file:  
+with open('./food_proximity_data.txt') as json_file:  
 	zip_code_info = json.load(json_file)
 
 ###############################################################################

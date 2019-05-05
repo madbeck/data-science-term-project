@@ -52,5 +52,5 @@ with open('./lat_lon_by_zip_code.txt') as json_file:
 		print(food_access_data)
 		data[zipcode] = food_access_data
 
-with open('food_proximity_data_v2.txt', 'w') as outfile:
+with open('food_proximity_data.txt', 'w') as outfile:
 	json.dump(data, outfile)
